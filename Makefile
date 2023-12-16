@@ -1,7 +1,8 @@
 CFLAGS=-Wall -g
 build_path=./bin
+SRC=./
 
-all:	printf_width ex1-three ex1-four ex1-five ex1-six ex1-eight ex1-nine ex1-twelve count_each_digit ex1-thirteen char_array
+all:	printf_width ex1-three ex1-four ex1-five ex1-six ex1-eight ex1-nine ex1-twelve count_each_digit ex1-thirteen char_array ex1-sixteen ex1-nineteen
 
 printf_width:
 	gcc printf_width.c -o $(build_path)/$@
@@ -35,6 +36,12 @@ count_each_digit:
 
 char_array:
 	gcc char_array.c -o $(build_path)/$@
+
+ex1-sixteen:
+	gcc ex1-16.c -o $(build_path)/$@
+
+ex1-nineteen:
+	gcc ex1-19.c -o $(build_path)/$@
 
 clean:
 	rm -rf ./bin/*
